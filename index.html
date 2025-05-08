@@ -22,19 +22,61 @@
         .card-title {
             margin-bottom: 0.75rem;
         }
+        /* Twitter post styles */
+        #twitter-posts .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        #twitter-posts .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        #twitter-posts p {
+            word-break: break-word;
+        }
+        /* Loading animation */
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: #6419e6;
+            animation: spin 1s ease-in-out infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
-    <div class="navbar bg-base-100 shadow-lg">
+    <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
         <div class="flex-1">
             <a class="btn btn-ghost normal-case text-xl">Cardinal Robert Prevost</a>
         </div>
         <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#statements">Political Statements</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                    <li><a href="#social-media">Social Media</a></li>
+                </ul>
+            </div>
+            <ul class="menu menu-horizontal px-1 hidden lg:flex">
                 <li><a href="#background">Background</a></li>
                 <li><a href="#statements">Political Statements</a></li>
                 <li><a href="#analysis">Analysis</a></li>
                 <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#social-media">Social Media</a></li>
             </ul>
         </div>
     </div>
@@ -73,7 +115,7 @@
 
         <section id="statements" class="mb-12">
             <h2 class="text-3xl font-bold mb-6">Political Statements & Positions</h2>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
@@ -85,7 +127,7 @@
                         <p>This statement reflects his pastoral approach over strict doctrinal enforcement, aligning with Pope Francis's vision for church leadership.</p>
                     </div>
                 </div>
-                
+
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title">Women in Church Leadership</h3>
@@ -97,7 +139,7 @@
                         <p>This suggests a nuanced position: supportive of women's increased participation in church governance but hesitant about fundamental changes to ordination traditions.</p>
                     </div>
                 </div>
-                
+
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title">LGBTQ+ Issues</h3>
@@ -107,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
@@ -116,7 +158,7 @@
                         <p class="mt-2">Prevost's extensive experience in Peru and Latin America likely informs his understanding of migration issues, particularly those affecting Latin American communities. However, public records contain few direct quotes from him on immigration policy specifically.</p>
                     </div>
                 </div>
-                
+
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title">Environmental Issues</h3>
@@ -124,7 +166,7 @@
                         <p class="mt-2">In 2024, as part of his role as president of the Pontifical Commission for Latin America, he participated in a climate change conference focused on Latin America, indicating engagement with environmental concerns. However, detailed public statements on specific environmental policies are not widely documented.</p>
                     </div>
                 </div>
-                
+
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title">Poverty & Social Justice</h3>
@@ -137,7 +179,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="card bg-base-100 shadow-xl mt-6">
                 <div class="card-body">
                     <h3 class="card-title">Political Involvement</h3>
@@ -148,11 +190,11 @@
             </div>
         </section>
 
-        <div class="section-divider"></div>
+
 
         <section id="analysis" class="mb-12">
             <h2 class="text-3xl font-bold mb-6">Analysis & Context</h2>
-            
+
             <div class="card bg-base-100 shadow-xl mb-6">
                 <div class="card-body">
                     <h3 class="card-title">Balancing Act: Tradition and Reform</h3>
@@ -166,7 +208,7 @@
                     <p class="mt-4">This balanced approach is evident in his handling of <i>Fiducia Supplicans</i>, where he neither fully endorsed nor rejected the document but emphasized local bishops' authority to interpret it according to cultural contexts.</p>
                 </div>
             </div>
-            
+
             <div class="card bg-base-100 shadow-xl">
                 <div class="card-body">
                     <h3 class="card-title">Strategic Ambiguity</h3>
@@ -186,11 +228,11 @@
 
         <section id="conclusion">
             <h2 class="text-3xl font-bold mb-6">Conclusion</h2>
-            
+
             <div class="card bg-base-100 shadow-xl">
                 <div class="card-body">
                     <p>Cardinal Robert Prevost emerges as a figure who defies simple political categorization. His public statements on major political issues are relatively limited, reflecting both his "low public profile" since arriving in Rome and his apparent preference for working within church structures rather than making provocative public declarations.</p>
-                    
+
                     <p class="mt-4">What emerges from the available evidence is a prelate who:</p>
                     <ul class="list-disc pl-6 mt-2">
                         <li>Emphasizes pastoral approaches over strict doctrinal enforcement</li>
@@ -199,17 +241,17 @@
                         <li>Takes a nuanced, contextual approach to controversial issues like same-sex blessings</li>
                         <li>Values synodality and inclusion in church governance while working within established structures</li>
                     </ul>
-                    
+
                     <p class="mt-4">This complex profile—neither strictly progressive nor traditionalist—reflects the challenges of leadership in a global church spanning diverse cultural contexts. It also illustrates how church leaders often operate with different priorities and frameworks than secular political figures, focusing on theological coherence, pastoral effectiveness, and institutional continuity alongside engagement with contemporary social issues.</p>
                 </div>
             </div>
         </section>
-        
+
         <div class="section-divider"></div>
-        
+
         <section id="sources" class="mb-12">
             <h2 class="text-3xl font-bold mb-6">Sources & Research Notes</h2>
-            
+
             <div class="card bg-base-100 shadow-xl">
                 <div class="card-body">
                     <p class="italic">This analysis is based on publicly available information as of May 2025, including:</p>
@@ -223,6 +265,37 @@
                 </div>
             </div>
         </section>
+
+        <div class="section-divider"></div>
+
+        <section id="social-media" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">Social Media Presence</h2>
+
+            <div class="card bg-base-100 shadow-xl mb-6">
+                <div class="card-body">
+                    <div class="flex items-center mb-4">
+                        <div class="avatar mr-3">
+                            <div class="w-12 h-12 rounded-full overflow-hidden">
+                                <img src="pope.jpg" alt="Cardinal Robert Prevost" />
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="card-title mb-0">X (Twitter) Posts</h3>
+                            <p class="text-sm opacity-70">@drprevost · Bishop of Chiclayo, Peru</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">Cardinal Prevost's social media presence provides additional insights into his perspectives on various religious, social, and political issues. His posts reflect his engagement with current events, theological reflections, and his pastoral work in Peru and beyond. Below are selected posts that highlight key themes in his public communications.</p>
+
+                    <div id="twitter-posts" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div class="col-span-full text-center">
+                            <div class="loading-spinner"></div>
+                            <p>Loading social media posts...</p>
+                        </div>
+                        <!-- Twitter posts will be loaded here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
@@ -230,5 +303,122 @@
             <p>Research compiled May 2025</p>
         </div>
     </footer>
+
+    <script>
+        // Global variable to store all posts
+        let allPosts = [];
+        let postsPerPage = 24;
+        let currentPage = 1;
+
+        // Function to create a post element
+        function createPostElement(post) {
+            // Create a card for the post
+            const postElement = document.createElement('div');
+            postElement.className = 'card bg-base-200 shadow-sm hover:shadow-md transition-all duration-300 border border-opacity-20 border-base-300 hover:bg-base-100';
+
+            // Format the post text
+            let postText = post.text;
+
+            // Convert URLs to clickable links
+            postText = postText.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
+
+            // Highlight hashtags
+            postText = postText.replace(/#(\w+)/g, '<span class="text-secondary font-semibold">#$1</span>');
+
+            // Highlight mentions
+            postText = postText.replace(/@(\w+)/g, '<span class="text-primary font-semibold">@$1</span>');
+
+            // Create the card content
+            postElement.innerHTML = `
+                <div class="card-body p-4">
+                    <div class="flex items-center mb-3">
+                        <div class="avatar">
+                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                <img src="pope.jpg" alt="Cardinal Robert Prevost" />
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-semibold text-sm">Cardinal Robert Prevost, OSA</p>
+                            <p class="text-xs opacity-70">@drprevost · Bishop of Chiclayo, Peru</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed">${postText}</p>
+                    <div class="text-xs text-right mt-3 opacity-60">
+                        <span>Posted on X</span>
+                    </div>
+                </div>
+            `;
+
+            return postElement;
+        }
+
+        // Function to display posts for the current page
+        function displayPosts() {
+            const container = document.getElementById('twitter-posts');
+
+            // Clear the container first
+            container.innerHTML = '';
+
+            // Calculate start and end indices for the current page
+            const startIndex = 0;
+            const endIndex = currentPage * postsPerPage;
+
+            // Get posts for the current page
+            const postsToDisplay = allPosts.slice(startIndex, endIndex);
+
+            // Create and append post elements
+            postsToDisplay.forEach(post => {
+                const postElement = createPostElement(post);
+                container.appendChild(postElement);
+            });
+
+            // Add "Load More" button if there are more posts to load
+            if (endIndex < allPosts.length) {
+                const loadMoreContainer = document.createElement('div');
+                loadMoreContainer.className = 'col-span-full text-center mt-6';
+
+                const loadMoreButton = document.createElement('button');
+                loadMoreButton.className = 'btn btn-primary';
+                loadMoreButton.textContent = `Load More (${allPosts.length - endIndex} remaining)`;
+
+                loadMoreButton.addEventListener('click', () => {
+                    currentPage++;
+                    displayPosts();
+                });
+
+                loadMoreContainer.appendChild(loadMoreButton);
+                container.appendChild(loadMoreContainer);
+            } else if (allPosts.length > postsPerPage) {
+                // Show "All posts loaded" message if we've loaded all posts and there were more than one page
+                const allLoadedContainer = document.createElement('div');
+                allLoadedContainer.className = 'col-span-full text-center mt-6 text-sm opacity-70';
+                allLoadedContainer.textContent = `All ${allPosts.length} posts loaded`;
+                container.appendChild(allLoadedContainer);
+            }
+        }
+
+        // Function to load and display X posts
+        async function loadTwitterPosts() {
+            try {
+                // Fetch the JSON data
+                const response = await fetch('pope.json');
+                allPosts = await response.json();
+
+                // Display the first page of posts
+                displayPosts();
+
+            } catch (error) {
+                console.error('Error loading Twitter posts:', error);
+                document.getElementById('twitter-posts').innerHTML = `
+                    <div class="col-span-full text-center p-4">
+                        <p class="text-error">Failed to load social media posts. Please try again later.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Load Twitter posts when the page is loaded
+        document.addEventListener('DOMContentLoaded', loadTwitterPosts);
+    </script>
 </body>
 </html>
